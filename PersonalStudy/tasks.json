@@ -7,9 +7,9 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${workspaceFolder}/Projects/BFS/*.cpp",
+                "${workspaceFolder}/PersonalStudy/*.cpp",
                 "-o",
-                "${workspaceFolder}/Projects/BFS/finalProgram.out"
+                "${workspaceFolder}/PersonalStudy/finalProgram.out"
             ],
             "options": {
                 "cwd": "${fileDirname}"
