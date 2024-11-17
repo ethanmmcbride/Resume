@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+}
+
+/* Main container layout */
+.container {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 300px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-right: 1px solid #ddd;
+    position: sticky;   /* Make sidebar sticky */
+    top: 0;             /* Position it to stick to the top */
+    height: calc(100vh - 20px);      /* Full viewport height */
+    overflow-y: auto;   /* Add scroll if content overflows */
+}
+
+.sidebar h2 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.sidebar label {
+    display: block;
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+/* Content styles */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Style for directions output */
+.directions-output-container {
+    margin-bottom: 20px;
+}
+
+/* Center and align map */
+.map-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+/* Style for campus map */
+#campus-map {
+    position: relative;
+    width: 800px;
+    height: 1032px;
+    background-image: url(CampusMap.jpg); 
+    background-size: cover;
+}
+
+/* Style for building markers */
+.building {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 0, 0, 0.288);
+    border-radius: 50%;
+    cursor: pointer;
+}
