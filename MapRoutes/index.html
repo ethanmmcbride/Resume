@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="alg.js" defer></script>
+    <title>Campus Map Navigation</title>
+</head>
+<body>
+<div class="container">
+    <!-- Sidebar for Algorithm Selection -->
+    <div class="sidebar">
+        <h2>Select Algorithm</h2>
+        <label>
+            <input type="radio" name="algorithm" value="dijkstra" checked onchange="setAlgorithm('dijkstra')">
+            Dijkstra's Algorithm
+        </label>
+        <label>
+            <input type="radio" name="algorithm" value="bfs" onchange="setAlgorithm('bfs')">
+            Breadth-First Search
+        </label>
+        <label>
+            <input type="radio" name="algorithm" value="dfs" onchange="setAlgorithm('dfs')">
+            Depth-First Search
+        </label>
+        <label>
+            <input type="checkbox" id="accessibility" onchange="toggleAccessibility()">
+            Accessibility Mode
+        </label>
+        <div class="directions-output-container">
+            <p id="output">Select two buildings to find the shortest path.</p>
+            <p id="closed">Closed Paths are in Orange</p>
+        </div>
+        <button onclick="reset()">Reset</button>
+    </div>
+
+<!--  MAP  -->
+    <div class="content">  
+        <div class="map-container">
+            <div id="campus-map">
+                <div id="SRC" class="building" onclick="selectBuilding('SRC')"></div>
+                <div id="B" class="building" onclick="selectBuilding('B')"></div>
+                <div id="TG" class="building" onclick="selectBuilding('TG')"></div>
+                <div id="CPAC" class="building" onclick="selectBuilding('CPAC')"></div>
+                <div id="PL" class="building" onclick="selectBuilding('PL')"></div>
+                <div id="EC" class="building" onclick="selectBuilding('EC')"></div>
+                <div id="MH" class="building" onclick="selectBuilding('MH')"></div>
+                <div id="H" class="building" onclick="selectBuilding('H')"></div>
+                <div id="GH" class="building" onclick="selectBuilding('GH')"></div>
+                <div id="TSU" class="building" onclick="selectBuilding('TSU')"></div>
+                <div id="VA" class="building" onclick="selectBuilding('VA')"></div>
+                <div id="DBH" class="building" onclick="selectBuilding('DBH')"></div>
+                <div id="GC" class="building" onclick="selectBuilding('GC')"></div>
+                <div id="LH" class="building" onclick="selectBuilding('LH')"></div>
+                <div id="SHCC" class="building" onclick="selectBuilding('SHCC')"></div>
+                <div id="SGMH" class="building" onclick="selectBuilding('SGMH')"></div>
+                <div id="GAH" class="building" onclick="selectBuilding('GAH')"></div>
+                <div id="ASC" class="building" onclick="selectBuilding('ASC')"></div>
+                <div id="TH" class="building" onclick="selectBuilding('TH')"></div>
+                <div id="MC" class="building" onclick="selectBuilding('MC')"></div>
+                <div id="UP" class="building" onclick="selectBuilding('UP')"></div>
+                <div id="CY" class="building" onclick="selectBuilding('CY')"></div>
+                <div id="D" class="building" onclick="selectBuilding('D')"></div>
+                <div id="TTC" class="building" onclick="selectBuilding('TTC')"></div>
+                <div id="TTF" class="building" onclick="selectBuilding('TTF')"></div>
+                <div id="TSF" class="building" onclick="selectBuilding('TSF')"></div>
+                <div id="AF" class="building" onclick="selectBuilding('AF')"></div>
+                <div id="GF" class="building" onclick="selectBuilding('GF')"></div>
+                <div id="TS" class="building" onclick="selectBuilding('TS')"></div>
+                <div id="G" class="building" onclick="selectBuilding('G')"></div>
+                <div id="Asouth" class="building" onclick="selectBuilding('Asouth')"></div>
+                <div id="A" class="building" onclick="selectBuilding('A')"></div>
+                <div id="P" class="building" onclick="selectBuilding('P')"></div>
+                <div id="CC" class="building" onclick="selectBuilding('CC')"></div>
+                <div id="FA" class="building" onclick="selectBuilding('FA')"></div>
+                <div id="E" class="building" onclick="selectBuilding('E')"></div>
+                <div id="CS" class="building" onclick="selectBuilding('CS')"></div>
+                <div id="I" class="building" onclick="selectBuilding('I')"></div>
+                <div id="F" class="building" onclick="selectBuilding('F')"></div>
+                <div id="RGC" class="building" onclick="selectBuilding('RGC')"></div>
+                <div id="ENPS" class="building" onclick="selectBuilding('ENPS')"></div>
+                <div id="ESPS" class="building" onclick="selectBuilding('ESPS')"></div>
+                <div id="S" class="building" onclick="selectBuilding('S')"></div>
+                <div id="CP" class="building" onclick="selectBuilding('CP')"></div>
+                <div id="NPS" class="building" onclick="selectBuilding('NPS')"></div>
+                <div id="SCPS" class="building" onclick="selectBuilding('SCPS')"></div>
+                <div id="QUAD" class="building" onclick="selectBuilding('QUAD')"></div>
+                <div id="RH" class="building" onclick="selectBuilding('RH')"></div>
+                <div id="MARRIOTT" class="building" onclick="selectBuilding('MARRIOTT')"></div>
+                <div id="TSC" class="building" onclick="selectBuilding('TSC')"></div>
+
+
+
+                <canvas id="connections" width="800" height="1032"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
